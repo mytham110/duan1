@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <style>
+            .categories-list {
+                position: absolute;
+                display: flex;
+                flex-direction: column;
+                z-index: 10;
+                top: 130%;
+                width: 100%;
+                border-radius: 6px;
+                padding: 6px 0;
+                background-color: #fff;
+                box-shadow: 1px 2px 4px #459293;
+                width: 300px;
+            }
+
+            .categories-list-item {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                text-transform: capitalize;
+            }
+
+            .categories-list-children {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 10;
+                transform: translateX(calc(100% + 12px));
+                min-width: 368px;
+                background-color: #fff;
+                border-radius: 6px;
+                overflow: hidden;
+                box-shadow: 1px 1px 3px #451526;
+            }
+
+            .list-item-children {
+                position: absolute;
+                right: 0;
+                top: 0;
+                z-index: 10;
+                transform: translateX(calc(100% + 12px));
+                min-width: 768px;
+                background-color: #5458;
+                border-radius: 6px;
+                overflow: hidden;
+                display: none;
+                box-shadow: 1px 1px 3px #451526;
+            }
+
+            .list-item-children a {
+                display: flex;
+                align-items: center;
+                padding: 10px;
+                color: rgb(125, 135, 156);
+                text-transform: capitalize;
+            }
+
+            .list-item-children a:hover {
+                background-color: #532647;
+            }
+
+            .list-item-children-active {
+                display: block;
+            }
+        </style>
+    </head>
+    <body>
+        <ul class="categories-list">
+            <div>
+                <li class="categories-list-item">
+                    <a class="categories-list-item-link" href="/">Item 1</a>
+                    <ul class="categories-list-children">
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 1.1</a
+                                >
+                                <ul class="categories-list-children">
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 1.1.1</a
+                                            >
+                                            <ul
+                                                class="categories-list-children"
+                                            >
+                                                <div>
+                                                    <li
+                                                        class="categories-list-item"
+                                                    >
+                                                        <a
+                                                            class="categories-list-item-link"
+                                                            href="/"
+                                                            >Subitem 1.1.1.1</a
+                                                        >
+                                                    </li>
+                                                </div>
+                                                <div>
+                                                    <li
+                                                        class="categories-list-item"
+                                                    >
+                                                        <a
+                                                            class="categories-list-item-link"
+                                                            href="/"
+                                                            >Subitem 1.1.1.2</a
+                                                        >
+                                                    </li>
+                                                </div>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 1.1.2</a
+                                            >
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </div>
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 1.2</a
+                                >
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+            <div>
+                <li class="categories-list-item">
+                    <a class="categories-list-item-link" href="/">Item 2</a>
+                    <ul class="categories-list-children">
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 2.1</a
+                                >
+                            </li>
+                        </div>
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 2.2</a
+                                >
+                            </li>
+                        </div>
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 2.3</a
+                                >
+                                <ul class="categories-list-children">
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 2.3.1</a
+                                            >
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 2.3.2</a
+                                            >
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 2.3.3</a
+                                            >
+                                            <ul
+                                                class="categories-list-children"
+                                            >
+                                                <div>
+                                                    <li
+                                                        class="categories-list-item"
+                                                    >
+                                                        <a
+                                                            class="categories-list-item-link"
+                                                            href="/"
+                                                            >Subitem 2.3.3.1</a
+                                                        >
+                                                    </li>
+                                                </div>
+                                                <div>
+                                                    <li
+                                                        class="categories-list-item"
+                                                    >
+                                                        <a
+                                                            class="categories-list-item-link"
+                                                            href="/"
+                                                            >Subitem 2.3.3.2</a
+                                                        >
+                                                    </li>
+                                                </div>
+                                                <div>
+                                                    <li
+                                                        class="categories-list-item"
+                                                    >
+                                                        <a
+                                                            class="categories-list-item-link"
+                                                            href="/"
+                                                            >Subitem 2.3.3.3</a
+                                                        >
+                                                    </li>
+                                                </div>
+                                            </ul>
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+            <div>
+                <li class="categories-list-item">
+                    <a class="categories-list-item-link" href="/">Item 3</a>
+                    <ul class="categories-list-children">
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 3.1</a
+                                >
+                                <ul class="categories-list-children">
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 3.1.1</a
+                                            >
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 3.1.2</a
+                                            >
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </div>
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 3.2</a
+                                >
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+            <div>
+                <li class="categories-list-item">
+                    <a class="categories-list-item-link" href="/">Item 4</a>
+                    <ul class="categories-list-children">
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 3.1</a
+                                >
+                                <ul class="categories-list-children">
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 3.1.1</a
+                                            >
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 3.1.2</a
+                                            >
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </div>
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 3.2</a
+                                >
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+            <div>
+                <li class="categories-list-item">
+                    <a class="categories-list-item-link" href="/">Item 5</a>
+                    <ul class="categories-list-children">
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 3.1</a
+                                >
+                                <ul class="categories-list-children">
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 3.1.1</a
+                                            >
+                                        </li>
+                                    </div>
+                                    <div>
+                                        <li class="categories-list-item">
+                                            <a
+                                                class="categories-list-item-link"
+                                                href="/"
+                                                >Subitem 3.1.2</a
+                                            >
+                                        </li>
+                                    </div>
+                                </ul>
+                            </li>
+                        </div>
+                        <div>
+                            <li class="categories-list-item">
+                                <a class="categories-list-item-link" href="/"
+                                    >Subitem 3.2</a
+                                >
+                            </li>
+                        </div>
+                    </ul>
+                </li>
+            </div>
+            <div>
+                <li class="categories-list-item">
+                    <a class="categories-list-item-link" href="/">Item 6</a>
+                </li>
+            </div>
+        </ul>
+        <script src="./main.js"></script>
+    </body>
+</html>
